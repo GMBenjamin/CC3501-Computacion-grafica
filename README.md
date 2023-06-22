@@ -5,4 +5,5 @@ Para poder utilizar utilizar los archivos de este repositorio es necesario tener
 
 Dentro de este repositorio encontrarás:
 
-* **Naves_2D.py:** Archivo que genera una vantana de Pyglet y dibuja naves espaciales que navegan por el espacio.
+* **Naves_2D.py:** Archivo que genera una vantana de Pyglet y dibuja naves espaciales.
+* **Naves_Bezier.py:** Archivo que genera una vantana de Pyglet con naves espaciales que pueden dibujar una curva de Bèzier.
