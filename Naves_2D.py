@@ -22,53 +22,42 @@ naves = pyglet.graphics.Group(1)
 #Las figuras que pertenecen a "naves" se dibujan por arriba de "fondo".
 
 #Las siguientes figuras forman a la nave nodriza.
-Cuerpo = pyglet.shapes.Rectangle(235,220,10,80, color=(200,200,200),
-                                 batch=Lienzo, group=naves)
-Punta = pyglet.shapes.Triangle(235,300,245,300,240,330,
-                               color=(200,200,200),batch=Lienzo,group=naves)
-Ala_izq = pyglet.shapes.Triangle(235,300,195,220,235,220,
-                                 color=(255,255,255), batch=Lienzo,group=naves)
-Ala_der = pyglet.shapes.Triangle(245,300,285,220,245,220,
-                                 color=(255,255,255), batch=Lienzo,group=naves)
-Prop_izq = pyglet.shapes.Triangle(195,220,215,210,225,220,
-                                 color=(255,255,255), batch=Lienzo,group=naves)
-Prop_der = pyglet.shapes.Triangle(285,220,265,210,255,220,
-                                  color=(255,255,255), batch=Lienzo,group=naves)
-Prop_c = pyglet.shapes.Rectangle(225,210,30,10, color=(255,120,30),
+Cuerpo = pyglet.shapes.Polygon((235,220),(235,300),(240,330),(245,300),
+                                (245,220),color=(200,200,200),
+                                batch=Lienzo,group=naves)
+Ala_izq = pyglet.shapes.Polygon((235,300),(195,220),(215,210),
+                                (225,220),(235,220),color=(255,255,255),
+                                batch=Lienzo,group=naves)
+Ala_der = pyglet.shapes.Polygon((245,300),(285,220),(265,210),(255,220),
+                                 (245,220),color=(255,255,255),
+                                 batch=Lienzo,group=naves)
+Prop = pyglet.shapes.Rectangle(225,210,30,10, color=(255,120,30),
                                     batch=Lienzo,group=naves)
 
 #Las siguientes figuras forman la nave del costado izquierdo.
-Mini_c_izq = pyglet.shapes.Rectangle(100,110,6,48,color=(200,200,200),
-                                     batch=Lienzo,group=naves)
-Mini_p_izq = pyglet.shapes.Triangle(100,158,106,158,103,182,color=(200,200,200),
+Mini_c_izq = pyglet.shapes.Polygon((100,110),(100,158),(103,182),(106,158)
+                                    ,(106,110),color=(200,200,200),
                                     batch=Lienzo,group=naves)
-Mini_ai_izq = pyglet.shapes.Triangle(100,158,100,110,76,110,color=(255,255,255),
+Mini_ai_izq = pyglet.shapes.Polygon((100,158),(100,110),(94,110),(88,104),
+                                     (76,110),color=(255,255,255),
                                      batch=Lienzo,group=naves)
-Mini_ad_izq = pyglet.shapes.Triangle(106,158,106,110,130,110,
-                                     color=(255,255,255),batch=Lienzo,
+Mini_ad_izq = pyglet.shapes.Polygon((106,158),(106,110),(130,110),(118,104),
+                                     (112,110),color=(255,255,255),batch=Lienzo,
                                      group=naves)
-Mini_pi_izq = pyglet.shapes.Triangle(76,110,88,104,94,110,color=(255,255,255),
-                                     batch=Lienzo,group=naves)
-Mini_pd_izq = pyglet.shapes.Triangle(130,110,118,104,112,110,
-                                     color=(255,255,255),batch=Lienzo,
-                                     group=naves)
-Mini_mp_izq = pyglet.shapes.Rectangle(94,104,18,6, color=(255,120,30),
+Mini_p_izq = pyglet.shapes.Rectangle(94,104,18,6, color=(255,120,30),
                                       batch=Lienzo,group=naves)
 
 #Las siguientes figuras forman la nave del costado derecho.
-Mini_c_der = pyglet.shapes.Rectangle(380,110,6,48,color=(200,200,200),
+Mini_c_der = pyglet.shapes.Polygon((380,110),(380,158),(383,182),(386,158),
+                                   (386,110),color=(200,200,200),
                                      batch=Lienzo,group=naves)
-Mini_p_der = pyglet.shapes.Triangle(380,158,386,158,383,182,
-                                    color=(200,200,200),batch=Lienzo,group=naves)
-Mini_ai_der = pyglet.shapes.Triangle(380,158,380,110,354,110,
-                                     color=(255,255,255),batch=Lienzo,group=naves)
-Mini_ad_der = pyglet.shapes.Triangle(386,158,386,110,410,110,
-                                     color=(255,255,255),batch=Lienzo,group=naves)
-Mini_pi_der = pyglet.shapes.Triangle(354,110,366,104,372,110,
-                                     color=(255,255,255),batch=Lienzo,group=naves)
-Mini_pd_der = pyglet.shapes.Triangle(410,110,398,104,392,110,
-                                     color=(255,255,255),batch=Lienzo,group=naves)
-Mini_mp_der = pyglet.shapes.Rectangle(374,104,18,6, color=(255,120,30),
+Mini_ai_der = pyglet.shapes.Polygon((380,158),(380,110),(372,110),(366,104),
+                                    (354,110),color=(255,255,255),
+                                    batch=Lienzo,group=naves)
+Mini_ad_der = pyglet.shapes.Polygon((386,158),(386,110),(392,110),(398,104),
+                                    (410,110),color=(255,255,255),
+                                    batch=Lienzo,group=naves)
+Mini_p_der = pyglet.shapes.Rectangle(374,104,18,6, color=(255,120,30),
                                       batch=Lienzo,group=naves)
 
 #La función posiciones entrega una posición aleatoria para el eje x.
