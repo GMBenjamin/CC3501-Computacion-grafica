@@ -45,7 +45,7 @@ Hay una desviación en la curva dibujada, esta se debe a un problema de conversi
 Su uso requiere el archivo <code>Lluvia_Shader.py</code> que se encuentra en este repositorio.
 
 El programa utiliza un sistema de partículas para simular la lluvia. Estas particulas están constantemente cayendo, por lo que una vez que llegan al suelo se
-devuelven arriba con una posición aleatoria en los ejes x,z. Por otro lado, el entorno dibujado se encuentra en 3D y se ve con una proyección en perspectiva.
+devuelven arriba con una posición aleatoria en los ejes x, z. Por otro lado, el entorno dibujado se encuentra en 3D y se ve con una proyección en perspectiva.
 
 El tamaño base de las partículas es 5. 
 * La tecla L las vuelve más pequeñas, dejándolas de tamaño 3.
