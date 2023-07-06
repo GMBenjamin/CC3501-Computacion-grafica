@@ -29,7 +29,7 @@ def redraw(obj):
                                                position=("f",obj.ub_vertex), colors=("Bn",obj.col_vertex),batch=lienzo)
 def scene_generator():
     for j in range(0,75):
-        fdrawO(fig.Obstacle(random.uniform(-1.6,1.6),random.uniform(-1.6,1.6),1.5,0.04,"E"))
+        fdrawO(fig.Obstacle(random.uniform(-1.6,1.6),random.uniform(-1.6,1.6),1.5,0.04))
     Player = [fig.Spaceship(0,0,1,0,0), fig.Spaceship(0.4,-0.4,0.5,0,0), fig.Spaceship(-0.4,-0.4,0.5,0,0)]
     for k in range(0,len(Player)):
         fdrawN(Player[k])

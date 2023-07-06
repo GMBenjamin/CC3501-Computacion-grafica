@@ -38,17 +38,15 @@ class Spaceship:
                         self.x_pos-0.5*(self.sz)*np.sin(self.rotY),self.y_pos+0.5*(self.sz)*np.cos(self.rotY),0)
         
 class Obstacle:
-    def __init__(self,X,Y,Z,escala,categoria):
+    def __init__(self,X,Y,Z,escala):
         self.X = X
         self.Y = Y
         self.Z = Z
         self.S = escala
-        self.Type = categoria
-        if self.Type=="E":
-            self.ub_vertex =(self.X-0.5*self.S,self.Y+0.5*self.S,self.Z-0.5*self.S, self.X-0.5*self.S,self.Y+0.5*self.S,self.Z+0.5*self.S,
+        self.ub_vertex =(self.X-0.5*self.S,self.Y+0.5*self.S,self.Z-0.5*self.S, self.X-0.5*self.S,self.Y+0.5*self.S,self.Z+0.5*self.S,
                                                                  self.X+0.5*self.S,self.Y+0.5*self.S,self.Z+0.5*self.S, self.X+0.5*self.S,self.Y+0.5*self.S,self.Z-0.5*self.S,
                                                                  self.X-0.5*self.S,self.Y-0.5*self.S,self.Z-0.5*self.S, self.X-0.5*self.S,self.Y-0.5*self.S,self.Z+0.5*self.S,
                                                                  self.X+0.5*self.S,self.Y-0.5*self.S,self.Z+0.5*self.S, self.X+0.5*self.S,self.Y-0.5*self.S,self.Z-0.5*self.S)
-            self.col_vertex =(255,250,140,255, 255,250,140,255, 255,250,140,255, 255,250,140,255,
+        self.col_vertex =(255,250,140,255, 255,250,140,255, 255,250,140,255, 255,250,140,255,
                                                                 255,250,140,255, 255,250,140,255, 255,250,140,255, 255,250,140,255)
         self.graph = None
